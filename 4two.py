@@ -1,5 +1,5 @@
 import multiprocessing
-tamaño=100
+tamaño=10000
 numbers = list(range(1, tamaño + 1))
 #2, 2, 5, 4, 10, 6, 17,…
 # 2= 1*1+1,5=2*2+1
