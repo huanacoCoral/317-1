@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menú Recorrer Información</title>
+<style>
+    /* Estilos básicos para el menú */
+    body {
+        font-family: Arial, sans-serif;
+    }
+    #menu {
+        list-style-type: none;
+        padding: 0;
+    }
+    #menu li {
+        margin-bottom: 5px;
+    }
+    #menu li a {
+        text-decoration: none;
+        color: #333;
+    }
+    #menu li a:hover {
+        color: #000;
+        font-weight: bold;
+    }
+</style>
+</head>
+<body>
+
+<h1>Menú Recorrer Información</h1>
+
+<ul id="menu">
+    <li><a href="#" onclick="mostrarInfo('item1')">Item 1</a></li>
+    <li><a href="#" onclick="mostrarInfo('item2')">Item 2</a></li>
+    <li><a href="#" onclick="mostrarInfo('item3')">Item 3</a></li>
+</ul>
+
+<div id="informacion">
+    <!-- Aquí se mostrará la información -->
+</div>
+
+<script>
+    function mostrarInfo(item) {
+        var informacion = obtenerInformacion(item);
+        document.getElementById('informacion').innerText = informacion;
+    }
+
+    function obtenerInformacion(item) {
+        // Aquí podrías tener un objeto, un array, o cualquier fuente de información
+        // En este ejemplo, simplemente devolvemos un mensaje basado en el item seleccionado
+        switch(item) {
+            case 'item1':
+                return 'Esta es la información del Item 1.';
+            case 'item2':
+                return 'Esta es la información del Item 2.';
+            case 'item3':
+                return 'Esta es la información del Item 3.';
+            default:
+                return 'Información no encontrada.';
+        }
+    }
+</script>
+
+</body>
+</html>

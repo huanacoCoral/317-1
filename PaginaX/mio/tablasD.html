@@ -1,0 +1,73 @@
+<section class="section" id="about">
+    <?php include 'datosUsuarioDefecto.php'; ?>
+    
+        <div class="container">      
+            <div class="row align-items-center mr-auto">
+                
+                <table border="10">
+                    <tr>
+                    <div class="widget">
+                            <td>
+                                <div class="icon-wrapper"> <i class="ti-calendar"></i> </div>
+                                <div class="infos-wrapper"> <h4 class="text-primary">fecha </h4></div>
+                            </td>
+                            <td><div class="icon-wrapper"><i class="ti-face-smile"></i></div>
+                                <div class="infos-wrapper"> <h4 class="text-primary">Estado</h4></div>
+                            </td>
+                            <td>
+                                <div class="icon-wrapper"><i class="ti-star"></i> </div>
+                                <div class="infos-wrapper"> <h4 class="text-primary">nombre</h4></div>
+                            </td>
+                            <td>
+                            <div class="icon-wrapper">
+                                <i class="ti-star"></i>
+                            </div>
+                            <div class="infos-wrapper">
+                                <h4 class="text-primary">Descripcion</h4>
+                                
+                            </div>
+                            </td>
+                        
+                    </div>
+                    </tr>
+                    
+                    <div class="widget">
+                        <?php
+                            include 'llamando.php';
+                             while ($DonacionHecha->fetch()) {
+                              //  echo $fecha;
+                           ?> 
+                            <tr>
+                                <div class="infos-wrapper">
+                                    
+                                    <td><?php echo  $fecha  . "<br>";?></td>
+                                </div>
+                        
+                                
+                                <div class="infos-wrapper">
+                                    
+                                    <td><?php  echo  $estado . "<br>";?></td>
+                                </div>
+                                
+                                <div class="infos-wrapper">
+                                    
+                                    <td><?php echo $nombreA?></td>
+                                </div>
+                                
+                                <div class="infos-wrapper">
+                                    
+                                    <td><?php echo $cantidad." - ". $unidad?></td>
+                                </div>
+                            </tr>
+                        <?php 
+                        }
+                        $DonacionHecha->close();
+                            ?>
+                        
+                     </div>
+                        
+                </table>
+           
+         </div>
+        </div>
+</section>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lista Desplegable con Búsqueda</title>
+<style>
+    /* Estilos básicos */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    .seccion {
+        display: none; /* Oculta las secciones por defecto */
+    }
+</style>
+</head>
+<body>
+
+<!-- Lista desplegable -->
+<select id="lista" onchange="mostrarSeccion()">
+    <option value="selecciona">Selecciona una opción</option>
+    <option value="opcion1">Opción 1</option>
+    <option value="opcion2">Opción 2</option>
+    <option value="opcion3">Opción 3</option>
+</select>
+
+<!-- Secciones con contenido oculto -->
+<div id="seccion1" class="seccion">
+    <h2>Sección 1</h2>
+    <p>Contenido de la Sección 1.</p>
+</div>
+<div id="seccion2" class="seccion">
+    <h2>Sección 2</h2>
+    <p>Contenido de la Sección 2.</p>
+</div>
+<div id="seccion3" class="seccion">
+    <h2>Sección 3</h2>
+    <p>Contenido de la Sección 3.</p>
+</div>
+
+<script>
+function mostrarSeccion() {
+    // Oculta todas las secciones
+    var secciones = document.getElementsByClassName("seccion");
+    for (var i = 0; i < secciones.length; i++) {
+        secciones[i].style.display = "none";
+    }
+    
+    // Obtiene el valor seleccionado en la lista desplegable
+    var lista = document.getElementById("lista");
+    var valorSeleccionado = lista.value;
+    
+    // Muestra la sección correspondiente al valor seleccionado
+    if (valorSeleccionado !== "selecciona") {
+        var seccionSeleccionada = document.getElementById(valorSeleccionado);
+        seccionSeleccionada.style.display = "block";
+    }
+}
+</script>
+
+</body>
+</html>

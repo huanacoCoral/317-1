@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostrar Alimento</title>
+</head>
+<body>
+    <div class="form-row">
+        <div class="col form-group">
+            <select id="listaL" onchange="MostrarAlimento()" name="alimento"
+                class="form-control form-select form-select-sm" aria-label=".form-select-sm example"
+                style="background-color: #2E3F52; font-family: sans-serif; color: #afa9a9;">
+                <option value="Alimento">Alimento</option>
+                <option id="otraOpcion" value="otraOpcion">Agregar otra opción...</option>
+                <option value="Carne">Carne</option>
+                <option value="Cereales">Cereales</option>
+                <option value="Verduras">Verduras</option>
+            </select>
+        </div>
+    </div>
+
+    <div id="tipoAlimentoSeleccionado"></div>
+
+    <script>
+        function MostrarAlimento() {
+    var lista = document.getElementById("listaL");
+    var valorSeleccionado = lista.value;
+    var tipoAlimentoMostrado = "";
+
+    console.log("Valor seleccionado:", valorSeleccionado); // Agregar esta línea
+
+    if (valorSeleccionado === "otraOpcion") {
+        var nuevaOpcion = prompt("Ingrese la nueva opción por favor:");
+        if (nuevaOpcion !== null && nuevaOpcion !== "") {
+            var nuevaOpcionElemento = document.createElement("option");
+            nuevaOpcionElemento.textContent = nuevaOpcion;
+            nuevaOpcionElemento.value = nuevaOpcion;
+            lista.appendChild(nuevaOpcionElemento);
+            lista.value = nuevaOpcion;
+
+            var nuevaSeccion = document.createElement("div");
+            nuevaSeccion.id = nuevaOpcion;
+            document.body.appendChild(nuevaSeccion);
+            nuevaSeccion.style.display = "block";
+        }
+    } else if (valorSeleccionado === "Alimento") {
+        var seccionSeleccionada = document.getElementById(valorSeleccionado);
+        seccionSeleccionada.style.display = "block";
+
+        }
+    switch (valorSeleccionado) {
+            case "Carne":
+                tipoAlimentoMostrado = "Carne";
+                break;
+            case "Cereales":
+                tipoAlimentoMostrado = "Cereales";
+                break;
+            case "Verduras":
+                tipoAlimentoMostrado = "Verduras";
+                break;
+            default:
+                tipoAlimentoMostrado = "No seleccionó nada";
+        }
+
+        document.getElementById("tipoAlimentoSeleccionado").innerHTML = "<button>" + tipoAlimentoMostrado + "</button>";
+    
+}
+
+    </script>
+</body>
+</html>

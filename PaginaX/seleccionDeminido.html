@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostrar Alimento</title>
+</head>
+<body>
+    <div class="form-row">
+        <div class="col form-group">
+            <select id="listaL" onchange="MostrarAlimento()" name="alimento"
+                class="form-control form-select form-select-sm" aria-label=".form-select-sm example"
+                style="background-color: #2E3F52; font-family: sans-serif; color: #afa9a9;">
+                <option value="Alimento">Alimento</option>
+                <option id="otraOpcion" value="otraOpcion">Agregar otra opción...</option>
+                <option value="pollo">Carne</option>
+                <option value="cebolla">Cereales</option>
+                <option value="carne res">Verduras</option>
+            </select>
+        </div>
+    </div>
+
+    <div id="tipoAlimentoSeleccionado"></div>
+
+    <script>
+        function MostrarAlimento() {
+            var selectElement = document.getElementById("listaL");
+            var selectedValue = selectElement.value;
+            var opciones = [];
+
+            switch (selectedValue) {
+                case "pollo":
+                    opciones = ["Carne de pollo", "Carne de res", "Carne de oveja"];
+                    break;
+                case "carne res":
+                    opciones = ["Verduras", "Frutas", "Hortalizas"];
+                    break;
+                default:
+                    opciones = [];
+            }
+
+            var selectHTML = "<select>";
+            for (var i = 0; i < opciones.length; i++) {
+                selectHTML += "<option value='" + opciones[i] + "'>" + opciones[i] + "</option>";
+            }
+            selectHTML += "</select>";
+
+            document.getElementById("tipoAlimentoSeleccionado").innerHTML = selectHTML;
+        }
+    </script>
+</body>
+</html>

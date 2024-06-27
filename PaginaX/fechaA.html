@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seleccionar Fecha Dentro de un Rango</title>
+</head>
+<body>
+
+<h1>Seleccionar Fecha Dentro de un Rango</h1>
+
+<form id="formulario" onsubmit="return validarFormulario()">
+    <label for="fecha">Selecciona una fecha dentro de un año:</label>
+    <input type="date" id="fecha" name="fecha" min="<?php echo date('Y-m-d'); ?>" max="2024-03-07" required>
+    <input type="submit" value="Enviar">
+</form>
+
+<script>
+    function validarFormulario() {
+        var fechaSeleccionada = document.getElementById('fecha').value;
+        var fechaActual = new Date().toISOString().split('T')[0]; // Obtener la fecha actual en formato YYYY-MM-DD
+        var fechaLimite = new Date();
+        fechaLimite.setFullYear(fechaLimite.getFullYear() + 1);
+        var fechaMaxima = fechaLimite.toISOString().split('T')[0]; // Obtener la fecha límite en formato YYYY-MM-DD
+
+        if (fechaSeleccionada < fechaActual || fechaSeleccionada > fechaMaxima) {
+            alert('La fecha seleccionada debe estar dentro del rango especificado.');
+            return false; // Evitar el envío del formulario
+        }
+
+        return true; // Permitir el envío del formulario
+    }
+</script>
+
+</body>
+</html>

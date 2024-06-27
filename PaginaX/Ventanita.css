@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&diplay=swap');
+
+*{
+    box-sizing: border-box;
+}
+body /*centrar todo texto*/
+{
+    background-color: #edef;
+    font-family: 'Poppins',sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+button /*estilo de boton*/
+{
+    background-color: #47a386;
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    font-size: 14px;
+    padding: 10px 25px;
+    }
+.modal-container /*para enviar atras al boton*/
+     {
+        display: flex;
+        background-color: rgba(0, 0, 0, 0.3); /*oscurece el resto*/
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        pointer-events: none;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+        opacity: 0;/*desaparece todo y solo deja el boton del principio*/
+    }
+.show{
+    pointer-events: auto;
+    opacity: 1;
+}
+.modal {
+    background-color: #fff;/* color a todo lo que rodea en el textoque mandamos adelante*/
+    width: 600px;/*dara un tamaño a la nueva ventana*/
+    max-width: 100%;
+    padding: 30px 50px;
+    border-radius:  50px; /*pone curveado*/
+    box-shadow: 0 2px 4px rgb(0,0,0,0.2) ;
+   /* text-align: center;/*centrar texto*/
+  /* font-size:5px;*//*tamaño de letra*/
+}
+.modal h1{
+    margin:0;
+
+}

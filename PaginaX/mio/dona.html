@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Página con Menú y Nombre de Usuario</title>
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+<header>
+    <h1>---</h1>
+</header>
+
+<nav class = 'dateUs'>
+    <!-- Aquí puedes agregar tus elementos de menú -->
+    <ul>
+        <li><div class="col-md-4">
+            <?php //datos usuariooooooo
+            include 'datosUsuario.php'; ?>
+            <h6 class="xs-font mb-0">DONADOR.</h6>
+            
+            <h3 class="section-title">
+                <p><?php echo "El nombre del usuario con ID 1 es:".  $nombre_usuario." ".$apellido_paterno?></p>
+            </h3>
+        </div></li>
+    </ul>
+</nav>
+
+<div class="contenedor">
+    <!-- Contenido de la primera sección -->
+    <section class="seccion">
+        <h2>Sección 1</h2>
+        <p>Contenido de la primera sección.</p>
+        
+        <script src="contenidoX.js"></script>
+        <div  id="contenido"></div>
+        
+    </section>
+
+    <!-- Contenido de la segunda sección -->
+    <section class="seccion">
+        
+        <h2>Sección 2</h2>
+        <p>Contenido de la segunda sección.</p>
+
+        <div class="me">
+            <button id="buscar">BUSCAR</button>
+            <button id="openX">DONAR</button>
+            <div class="modal-containerX" id ="cambiandoX">
+                <div class ='modalX'>
+                    <h1>
+                        bienvenido
+                    </h1>
+
+                    <div class="DonandoD"> <button id="closeX">Tipo</button>  </div>
+                    
+                    <button id="closeX">cerrar</button>
+                </div>
+            </div>
+
+            <div class="modal-containerX" id ="buscador">
+                    <div class ='modalX'>
+                        <h1>
+                            bienvenido al buscador
+                        </h1>
+                        <button id="Lbuscar">cerrar</button>
+                    </div>
+            </div>
+                
+            </div>
+
+            <!--si ponia este script arriba no funcionaba -->
+            <script src="vent.js"> </script>
+        </div>
+    </section>
+    
+</div>
+
+<div class="usuario">
+    <!-- Aquí puedes mostrar el nombre del usuario -->
+    Usuario: <span>Nombre de Usuario</span>
+</div>
+
+</body>
+</html>

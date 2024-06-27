@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tabla Desplazable con Diferente Información</title>
+<style>
+    /* Estilos básicos para la tabla */
+    body {
+        font-family: Arial, sans-serif;
+    }
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+    th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+    th {
+        background-color: #f2f2f2;
+    }
+    .tabla-contenedor {
+        max-height: 300px; /* Altura máxima de la tabla */
+        overflow: auto; /* Agregar barras de desplazamiento si la tabla es más grande que el contenedor */
+    }
+</style>
+</head>
+<body>
+
+<h1>Tabla Desplazable con Diferente Información</h1>
+
+<!-- Contenedor de la tabla -->
+<div class="tabla-contenedor" onwheel="scrollTabla(event)">
+    <!-- Tabla -->
+    <table id="tabla">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Edad</th>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+            <!-- Esta parte será reemplazada por JavaScript -->
+        </tbody>
+    </table>
+</div>
+
+<script>
+    var datos = [
+        // Conjunto de datos 1
+        [
+            { id: 1, nombre: 'John', edad: 30 },
+            { id: 2, nombre: 'Jane', edad: 25 },
+            { id: 3, nombre: 'Bob', edad: 40 }
+        ],
+        // Conjunto de datos 2
+        [
+            { id: 4, nombre: 'Alice', edad: 35 },
+            { id: 5, nombre: 'David', edad: 28 },
+            { id: 6, nombre: 'Emma', edad: 45 }
+        ]
+        // Puedes agregar más conjuntos de datos según sea necesario
+    ];
+
+    var currentIndex = 0;
+
+    function mostrarDatos() {
+        var tbody = document.getElementById('tbody');
+        tbody.innerHTML = ''; // Limpiar el tbody antes de agregar nuevas filas
+
+        datos[currentIndex].forEach(function(dato) {
+            var tr = document.createElement('tr');
+            tr.innerHTML = `
+                <td>${dato.id}</td>
+                <td>${dato.nombre}</td>
+                <td>${dato.edad}</td>
+            `;
+            tbody.appendChild(tr);
+        });
+    }
+
+    function scrollTabla(event) {
+        var tabla = document.querySelector('.tabla-contenedor');
+        var delta = event.deltaY;
+
+        if (delta > 0) {
+            currentIndex++;
+            if (currentIndex >= datos.length) {
+                currentIndex = 0;
+            }
+        } else {
+            currentIndex--;
+            if (currentIndex < 0) {
+                currentIndex = datos.length - 1;
+            }
+        }
+
+        mostrarDatos();
+        tabla.scrollTop = 0; // Reiniciar la posición de desplazamiento a la parte superior
+        event.preventDefault(); // Evitar el comportamiento predeterminado de la rueda del mouse
+    }
+
+    mostrarDatos(); // Mostrar los datos iniciales al cargar la página
+</script>
+
+</body>
+</html>

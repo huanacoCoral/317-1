@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sección responsive</title>
+<style>
+    .container {
+    display: flex;
+}
+
+.left-selection,
+.right-selection {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.seleccion {
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+/* Estilos para cuando la pantalla es más pequeña */
+@media screen and (max-width: 600px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left-selection,
+    .right-selection {
+        flex-grow: unset;
+    }
+}
+
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="left-selection">
+        <div class="seleccion">Selección Izquierda</div>
+    </div>
+    <div class="right-selection">
+        <div>Selección Derecha</div>
+    </div>
+</div>
+</body>
+</html>
