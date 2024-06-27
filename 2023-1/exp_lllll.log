@@ -1,0 +1,144 @@
+
+Connected to: Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+Export done in WE8MSWIN1252 character set and AL16UTF16 NCHAR character set
+server uses AL32UTF8 character set (possible charset conversion)
+
+About to export specified tables via Conventional Path ...
+. . exporting table                 ADMINISTRACION
+                                                            4 rows exported
+EXP-00091: Exporting questionable statistics.
+. . exporting table                       ATENDIDO
+                                                            3 rows exported
+EXP-00091: Exporting questionable statistics.
+. . exporting table  DOCUMENTACION_PERMISOPACIENTE
+                                                            6 rows exported
+EXP-00091: Exporting questionable statistics.
+. . exporting table                     ENFERMEDAD
+                                                            6 rows exported
+EXP-00091: Exporting questionable statistics.
+. . exporting table                      ENFERMERA
+                                                            2 rows exported
+EXP-00091: Exporting questionable statistics.
+EXP-00091: Exporting questionable statistics.
+. . exporting table                        ENTREGA
+                                                            2 rows exported
+EXP-00091: Exporting questionable statistics.
+. . exporting table                   ESPECIALIDAD
+                                                            3 rows exported
+EXP-00091: Exporting questionable statistics.
+. . exporting table                 EXAMEN_CLINICO
+                                                            4 rows exported
+EXP-00091: Exporting questionable statistics.
+. . exporting table                  EXAMEN_FISICO
+                                                            3 rows exported
+EXP-00091: Exporting questionable statistics.
+. . exporting table                       EXAMENES
+                                                            4 rows exported
+EXP-00091: Exporting questionable statistics.
+. . exporting table                       FAMILIAR
+                                                            4 rows exported
+EXP-00091: Exporting questionable statistics.
+. . exporting table                   FARMACEUTICO
+                                                            1 rows exported
+EXP-00091: Exporting questionable statistics.
+. . exporting table                       FARMACIA
+                                                            2 rows exported
+EXP-00091: Exporting questionable statistics.
+. . exporting table                        HABITOS
+                                                            6 rows exported
+EXP-00091: Exporting questionable statistics.
+. . exporting table           HABITOS_FISIOLOGICOS
+                                                            4 rows exported
+EXP-00091: Exporting questionable statistics.
+. . exporting table                HABITOS_TOXICOS
+                                                            5 rows exported
+EXP-00091: Exporting questionable statistics.
+. . exporting table              HISTORIAL_CLINICO
+                                                            5 rows exported
+EXP-00091: Exporting questionable statistics.
+. . exporting table               HISTORIAL_SOCIAL
+                                                            5 rows exported
+EXP-00091: Exporting questionable statistics.
+. . exporting table             HOJA_TRANSFERENCIA
+                                                            3 rows exported
+EXP-00091: Exporting questionable statistics.
+. . exporting table                         HTIENE
+                                                            5 rows exported
+EXP-00091: Exporting questionable statistics.
+. . exporting table                        INFORMA
+                                                            0 rows exported
+EXP-00091: Exporting questionable statistics.
+. . exporting table                   INSUMOMEDICO
+                                                            3 rows exported
+EXP-00091: Exporting questionable statistics.
+. . exporting table                        INTERNA
+                                                            4 rows exported
+EXP-00091: Exporting questionable statistics.
+. . exporting table            LISTADOMEDICAMENTOS
+                                                            9 rows exported
+EXP-00091: Exporting questionable statistics.
+. . exporting table                         MEDICA
+                                                            2 rows exported
+EXP-00091: Exporting questionable statistics.
+. . exporting table                         MEDICO
+                                                            2 rows exported
+EXP-00091: Exporting questionable statistics.
+EXP-00091: Exporting questionable statistics.
+. . exporting table                       PACIENTE
+                                                            6 rows exported
+EXP-00091: Exporting questionable statistics.
+. . exporting table                        PERSONA
+                                                           14 rows exported
+EXP-00091: Exporting questionable statistics.
+. . exporting table                 PERSONALMEDICO
+                                                            6 rows exported
+EXP-00091: Exporting questionable statistics.
+. . exporting table                      PERTENECE
+                                                            5 rows exported
+EXP-00091: Exporting questionable statistics.
+. . exporting table                    PROPORCIONA
+                                                            5 rows exported
+EXP-00091: Exporting questionable statistics.
+. . exporting table                 REGISTROPACIEN
+                                                            1 rows exported
+EXP-00091: Exporting questionable statistics.
+. . exporting table               REPORTE_FAMILIAR
+                                                            0 rows exported
+EXP-00091: Exporting questionable statistics.
+. . exporting table                        TRABAJA
+                                                            4 rows exported
+EXP-00091: Exporting questionable statistics.
+. . exporting table                          TRATA
+                                                            5 rows exported
+EXP-00091: Exporting questionable statistics.
+EXP-00091: Exporting questionable statistics.
+EXP-00091: Exporting questionable statistics.
+EXP-00091: Exporting questionable statistics.
+EXP-00091: Exporting questionable statistics.
+EXP-00091: Exporting questionable statistics.
+EXP-00091: Exporting questionable statistics.
+EXP-00091: Exporting questionable statistics.
+EXP-00091: Exporting questionable statistics.
+EXP-00091: Exporting questionable statistics.
+EXP-00091: Exporting questionable statistics.
+EXP-00091: Exporting questionable statistics.
+EXP-00091: Exporting questionable statistics.
+EXP-00091: Exporting questionable statistics.
+EXP-00091: Exporting questionable statistics.
+EXP-00091: Exporting questionable statistics.
+EXP-00091: Exporting questionable statistics.
+EXP-00091: Exporting questionable statistics.
+EXP-00091: Exporting questionable statistics.
+EXP-00091: Exporting questionable statistics.
+EXP-00091: Exporting questionable statistics.
+EXP-00091: Exporting questionable statistics.
+EXP-00091: Exporting questionable statistics.
+EXP-00091: Exporting questionable statistics.
+EXP-00091: Exporting questionable statistics.
+EXP-00091: Exporting questionable statistics.
+EXP-00091: Exporting questionable statistics.
+EXP-00091: Exporting questionable statistics.
+EXP-00091: Exporting questionable statistics.
+EXP-00091: Exporting questionable statistics.
+EXP-00091: Exporting questionable statistics.
+Export terminated successfully with warnings.

@@ -1,0 +1,10 @@
+
+Connected to: Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+Export done in WE8MSWIN1252 character set and AL16UTF16 NCHAR character set
+server uses AL32UTF8 character set (possible charset conversion)
+
+About to export specified tables via Conventional Path ...
+. . exporting table            LISTADOMEDICAMENTOS
+                                                            9 rows exported
+EXP-00091: Exporting questionable statistics.
+Export terminated successfully with warnings.

@@ -1,0 +1,55 @@
+
+Connected to: Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+Export done in WE8MSWIN1252 character set and AL16UTF16 NCHAR character set
+server uses AL32UTF8 character set (possible charset conversion)
+
+About to export specified tables via Conventional Path ...
+. . exporting table                          BANDA
+                                                            0 rows exported
+. . exporting table                         BLOQUE
+                                                            0 rows exported
+. . exporting table                     CALIFICA_F
+                                                            0 rows exported
+. . exporting table               CALIFICACONCURSO
+                                                            0 rows exported
+. . exporting table                        CARRERA
+                                                            0 rows exported
+. . exporting table                      CATEGORIA
+                                                            0 rows exported
+. . exporting table                COMISIONCULTURA
+                                                            0 rows exported
+. . exporting table                       CONCURSO
+                                                            0 rows exported
+. . exporting table                   CONVOCATORIA
+                                                            0 rows exported
+. . exporting table                          DANZA
+                                                            0 rows exported
+. . exporting table                        ENTRADA
+                                                            0 rows exported
+. . exporting table                       FACULTAD
+                                                            0 rows exported
+. . exporting table                    FRATERNIDAD
+                                                            0 rows exported
+. . exporting table                       FRATERNO
+                                                            0 rows exported
+. . exporting table                       INSCRIBE
+                                                            0 rows exported
+. . exporting table                         JURADO
+                                                            0 rows exported
+. . exporting table                     MONOGRAFIA
+                                                            0 rows exported
+. . exporting table                          NUSTA
+                                                            0 rows exported
+. . exporting table                   PARTICIPANTE
+                                                            0 rows exported
+. . exporting table                    PRE_ENTRADA
+                                                            0 rows exported
+. . exporting table                            ROL
+                                                            0 rows exported
+. . exporting table                      TIPODANZA
+                                                            0 rows exported
+. . exporting table                   TIPOFRATERNO
+                                                            0 rows exported
+. . exporting table                     VESTIMENTA
+                                                            0 rows exported
+Export terminated successfully without warnings.
